@@ -1,0 +1,364 @@
+/* -----------------------------------------
+	08. Widgets Styling
+----------------------------------------- */
+.widget {
+	font-size: 14px;
+	margin: 0 0 $widget-margin-lg;
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: $widget-margin-md;
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: $widget-margin-sm;
+	}
+
+	/* Nullify bottom margin for last elements in widgets and sidebars */
+	.sidebar & {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	select {
+		width: 100%;
+	}
+}
+
+.widget-title {
+	@include underbar($color: $accent-color, $width: 30px, $margin: 10px);
+	font-size: 18px;
+	margin-bottom: 25px;
+	letter-spacing: $letter-spacing-base;
+	color: $text-color-light;
+	font-weight: 400;
+
+	label {
+		text-transform: none;
+		display: block;
+		font-size: inherit;
+		margin: 0;
+		line-height: inherit;
+		font-weight: inherit;
+	}
+}
+
+/* WIDGET: Theme - Hero
+========================================= */
+.widget-hero {
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: $white;
+	padding: 90px 0;
+	position: relative;
+
+	@include media-breakpoint-down(md) {
+		padding: 70px 30px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding: 50px 20px;
+	}
+
+	.hero-badge-meta {
+		margin-bottom: 25px;
+	}
+
+	// Overlay
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.widget-hero-title {
+	color: currentColor;
+	font-size: 42px;
+	text-shadow: $hero-text-shadow;
+	font-weight: 900;
+	letter-spacing: $letter-spacing-base;
+
+	@include media-breakpoint-down(md) {
+		font-size: 36px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		font-size: 26px;
+	}
+}
+
+.widget-hero-subtitle {
+	letter-spacing: $letter-spacing-base;
+	font-size: 18px;
+	line-height: 1.333333333;
+	margin-bottom: 40px;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 15px;
+		line-height: $line-height-base;
+	}
+}
+
+/* WIDGET: Theme - Contact Widget
+========================================= */
+.ci-contact-widget-title {
+	font-weight: 600;
+	font-size: 16px;
+	margin: 0 0 15px;
+}
+
+.ci-contact-widget-items {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.ci-contact-widget-item {
+	display: flex;
+	align-items: baseline;
+	letter-spacing: $letter-spacing-base;
+	padding: 10px 0;
+	border-bottom: 1px dashed $border-color;
+
+	i {
+		text-align: center;
+		min-width: 26px;
+		color: $accent-color;
+		margin-right: 5px;
+	}
+}
+
+.elevation-candidate {
+	@include media-breakpoint-up(lg) {
+		// If it is the first item
+		// under an elevated <main> lift it up
+		&:first-child {
+			.main-elevated & {
+				position: relative;
+				z-index: 30;
+				margin-top: $main-content-elevation;
+			}
+
+			// Reset margin if the item is
+			.content-elevated & {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+/* WIDGET: Theme - Opening Hours
+========================================= */
+.ci-schedule-widget-intro {
+	margin-bottom: 20px;
+}
+
+.ci-schedule-widget-table {
+	text-align: left;
+
+	th {
+		font-weight: 500;
+	}
+
+	th, td {
+		padding: 10px 0;
+	}
+
+	tr {
+		border-bottom: 1px dashed $border-color;
+	}
+}
+
+/* WIDGET: List Widgets
+========================================= */
+// sass-lint:disable class-name-format
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_nav_menu,
+.widget-list-wrap {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		ul {
+			margin-left: 15px;
+		}
+	}
+
+	li {
+		line-height: normal;
+		display: block;
+		align-items: center;
+		position: relative;
+		letter-spacing: $letter-spacing-base;
+
+		a {
+			display: block;
+			margin-bottom: 3px;
+			color: $text-color-dark;
+			border-bottom: 1px dashed $border-color;
+			padding: 10px 0;
+
+			&:hover {
+				color: $accent-color;
+			}
+		}
+
+		.count,
+		.ci-count {
+			position: absolute;
+			right: 0;
+			top: 10px;
+		}
+	}
+}
+
+.widget_recent_comments,
+.widget_rss,
+.widget_recent_entries {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		display: block;
+		border-bottom: 1px dashed $border-color;
+		padding: 10px 0;
+		letter-spacing: $letter-spacing-base;
+	}
+}
+
+.widget_recent_entries {
+	.post-date {
+		display: block;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $text-color-light;
+		letter-spacing: $letter-spacing-base;
+	}
+}
+
+.entry-tags a, // sass-lint:disable-line force-element-nesting
+.tag-cloud-link {
+	display: inline-block;
+	padding: 4px 14px;
+	font-size: 12px !important;
+	border-radius: 20px;
+	border: 2px solid $border-color;
+	color: $text-color;
+	margin-bottom: 3px;
+
+	&:hover {
+		border-color: $accent-color;
+	}
+}
+// sass-lint:enable class-name-format
+
+/* WIDGET: #Search
+========================================= */
+.searchform {
+	> div {
+		position: relative;
+	}
+
+	input[type="text"],
+	input[type="search"] {
+		// Styling for the search input if required
+	}
+
+	.searchsubmit {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		height: calc(100% - 8px);
+		padding: 0 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* WIDGET: #Text Widget
+========================================= */
+.widget_text { // sass-lint:disable-line class-name-format
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* WIDGET: #Calendar
+================================================== */
+#wp-calendar {
+	width: 100%;
+
+	a {
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	caption {
+		text-align: left;
+		margin-top: 10px;
+		background: none repeat scroll 0 0 rgba($black, .03);
+		padding: 9px;
+	}
+
+	thead {
+		font-size: 10px;
+
+		th {
+			background: rgba($black, .1);
+			font-weight: bold;
+			padding: 8px;
+		}
+	}
+
+	tbody {
+		td {
+			background: none;
+			border: 1px solid rgba($black, .1);
+			text-align: center;
+			padding: 3px;
+
+			&:hover {
+				background: rgba($black, .1);
+			}
+		}
+
+		.pad {
+			background: none;
+		}
+	}
+
+	tfoot {
+		#next {
+			font-size: 10px;
+			text-transform: uppercase;
+			text-align: right;
+		}
+
+		#prev {
+			font-size: 10px;
+			text-transform: uppercase;
+			padding-top: 10px;
+		}
+	}
+}

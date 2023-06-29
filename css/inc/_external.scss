@@ -1,0 +1,264 @@
+/* -----------------------------------------
+	11. External Plugins
+----------------------------------------- */
+
+/* Jetpack Sharing */
+.sharedaddy {
+	margin-top: 30px;
+}
+
+/* WP Instagram */
+.null-instagram-feed {
+	p {
+		padding-top: 10px;
+	}
+}
+
+.instagram-pics {
+	list-style: none;
+	margin: 0 -2px;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+
+	li {
+		width: 33.33333333333%;
+		padding: 2px;
+
+		a {
+			display: block;
+			color: $text-color;
+		}
+
+		img {
+			border-radius: $border-radius-base;
+		}
+	}
+
+	.widget-section & {
+		margin-left: -15px;
+		margin-right: -15px;
+
+		li {
+			width: 25%;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-bottom: 30px;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin: 0;
+
+			li {
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			li {
+				width: 50%;
+			}
+		}
+	}
+}
+
+/* jQuery Chosen
+===================================== */
+.chosen-container {
+	max-width: 100%;
+	color: $text-color;
+
+	.chosen-single {
+		color: $text-color;
+		line-height: 20px;
+		border: 2px solid $input-border-color;
+		border-radius: 30px;
+		padding: 10px 14px;
+		height: 45px;
+		box-shadow: none;
+		background-color: $input-bg-color;
+		background-image: none;
+		max-width: 100%;
+		font-size: $font-size-base;
+		transition: background-color .18s ease, border-color .18s ease;
+
+		div {
+			b {
+				background: none !important;
+				position: relative;
+
+				&::before {
+					@include font-awesome(\f107);
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 5px;
+					color: $accent-color;
+
+					.ci-select & {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			background-color: $input-active-bg-color;
+			border-color: $input-active-border-color;
+		}
+	}
+
+	&.input-sm {
+		.chosen-single {
+			height: 35px;
+			padding: 5px 15px;
+			font-size: 14px;
+			line-height: 1.5;
+		}
+	}
+
+	.chosen-drop {
+		border: 2px solid $input-active-border-color;
+		border-top: none;
+		margin-top: -2px;
+		box-shadow: none;
+	}
+
+	.chosen-results {
+		li {
+			font-size: 15px;
+
+			&.highlighted {
+				background: $accent-color;
+				border-radius: 2px;
+			}
+		}
+	}
+}
+
+.chosen-container-single {
+	.chosen-search {
+		padding-left: 10px;
+		padding-right: 10px;
+		position: relative;
+		line-height: normal;
+
+		&::after {
+			@include font-awesome(\f002);
+			position: absolute;
+			right: 20px;
+			top: 16px;
+			opacity: 0.6;
+		}
+
+		input[type="text"] {
+			border-color: $border-color;
+			border-width: 1px;
+			background: none !important;
+			height: 35px;
+			padding: 5px 15px;
+			font-size: 14px;
+			border-radius: 30px;
+		}
+	}
+}
+
+.chosen-container-multi {
+	.chosen-choices {
+		color: $text-color;
+		transition: border-color .18s ease;
+		line-height: 30px;
+		border: 1px solid $input-border-color;
+		border-radius: 3px;
+		padding: 9px 25px 9px 6px;
+		height: 45px;
+		box-shadow: none;
+		background-color: $input-bg-color;
+		background-image: none;
+
+		&::after {
+			@include font-awesome(\f107);
+			font-size: 16px;
+			position: absolute;
+			top: 0;
+			line-height: 45px;
+			right: 12px;
+			height: 100%;
+			color: $text-color;
+			pointer-events: none;
+		}
+
+		li.search-choice {
+			font-size: 10px;
+			text-transform: uppercase;
+			padding: 6px 20px 6px 10px;
+			background: $grey;
+			margin: 3px 0 3px 5px;
+			border: 0;
+
+			.search-choice-close {
+				top: 7px;
+			}
+		}
+	}
+}
+
+.chosen-container-active {
+	.chosen-single {
+		outline: none;
+		background-color: $input-active-bg-color;
+		border-color: $input-active-border-color;
+	}
+
+	&.chosen-with-drop {
+		.chosen-single {
+			border-top-left-radius: 22px;
+			border-top-right-radius: 22px;
+			background: $white;
+			border: 2px solid $input-active-border-color;
+		}
+
+		&.input-sm {
+			.chosen-single {
+				border-top-left-radius: 18px;
+				border-top-right-radius: 18px;
+			}
+		}
+	}
+}
+
+/* Datepickers
+===================================== */
+.pika-single.ci-datepicker-theme {
+	color: $text-color;
+	background: $body-bg;
+	border: 1px solid $border-color;
+	border-radius: $border-radius-base;
+	box-shadow: $box-shadow;
+	padding: 5px;
+
+	.pika-button {
+		padding: 7px;
+	}
+
+	.is-today .pika-button {
+		color: $accent-color;
+	}
+
+	.is-selected .pika-button {
+		color: $text-on-accent;
+		background: $accent-color;
+		border: 0;
+		box-shadow: none;
+	}
+
+	.is-disabled .pika-button {
+		opacity: .3;
+	}
+
+	.pika-button:hover {
+		color: $text-on-accent !important;
+		background: $accent-color !important;
+	}
+}
