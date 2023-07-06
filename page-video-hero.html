@@ -32,14 +32,21 @@
 		
 <style>
   .swiper-container {
-    width: 1920px;
+    width: 100%;
   }
 
   .swiper-slide video {
     width: 100%;
     height: auto;
-    max-height: 600px; /* Set the desired height */
+    max-height: 600px; /* Set the desired height for desktop */
     object-fit: cover;
+  }
+
+  /* Mobile-friendly adjustments */
+  @media (max-width: 767px) {
+    .swiper-slide video {
+      max-height: 150px; /* Set the desired height for mobile */
+    }
   }
 </style>
 		
