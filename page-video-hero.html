@@ -24,8 +24,81 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="#">
 		<link rel="apple-touch-icon" sizes="114x114" href="#">
 
+	
+		
+		
+		<script language=JavaScript>
+//Disable right click script
+var message = "";
+///////////////////////////////////
+function clickIE() {
+    if (document.all) {
+        (message);
+        return false;
+    }
+}
+
+function clickNS(e) {
+    if (document.layers || (document.getElementById && !document.all)) {
+        if (e.which == 2 || e.which == 3) {
+            (message);
+            return false;
+        }
+    }
+}
+if (document.layers) {
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown = clickNS;
+} else {
+    document.onmouseup = clickNS;
+    document.oncontextmenu = clickIE;
+}
+
+document.oncontextmenu = new Function("return false")
+</script>
+	
+		
+		
+		<style>
+    /* Add your custom styles here */
+
+    body {
+      font-family: 'Montserrat', sans-serif; /* Replace 'Roboto' with your desired Google Font */
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+		
+		
+		
+		
+		
+
 	</head>
+
 	<body>
+	
+
+
+	
+	
+	
+	
+	
+	  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        .col-md-6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+	
+	
+	
+
+	
 		
 		
 <style>
