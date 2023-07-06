@@ -28,8 +28,6 @@
 	<body>
 		
 		
-		
-		
 <style>
   .swiper-container {
     width: 100%;
@@ -42,10 +40,17 @@
     object-fit: cover;
   }
 
-  /* Mobile-friendly adjustments */
+  /* Tablet and mobile adjustments */
+  @media (max-width: 991px) {
+    .swiper-slide video {
+      max-height: 400px; /* Set the desired height for tablets */
+    }
+  }
+
+  /* Mobile adjustments */
   @media (max-width: 767px) {
     .swiper-slide video {
-      max-height: 400px; /* Set the desired height for mobile */
+      max-height: 300px; /* Set the desired height for mobile devices */
     }
   }
 </style>
