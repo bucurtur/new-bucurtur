@@ -71,7 +71,7 @@ bucur-tur.com,  #bucurtur.md, #www.bucurtur.md, #www.bucurtur.com" />
 	
 		
 		
-		<script language=JavaScript>
+				<script language=JavaScript>
 //Disable right click script
 var message = "";
 ///////////////////////////////////
@@ -108,7 +108,22 @@ document.oncontextmenu = new Function("return false")
 
 		
 		
+		<style>
+    .head-intro-info {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
 		
+		
+		
+	  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        .col-md-6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+	
 		
 		
 		<style>
@@ -252,14 +267,11 @@ document.oncontextmenu = new Function("return false")
 
 
 	
-	
-	
-	 
-	
-	
-	
-	
-	<head>
+
+		
+		
+		
+		
     <style>
         .viber-button {
             display: inline-flex;
@@ -288,12 +300,12 @@ document.oncontextmenu = new Function("return false")
             white-space: nowrap;
         }
     </style>
-</head>
-	
+
 	
 	
 
 	
+
 	<style>
   #messenger-chat {
     position: fixed;
@@ -302,23 +314,32 @@ document.oncontextmenu = new Function("return false")
     z-index: 9999;
     background-color: #0084FF;
     color: #fff;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 6px 12px; /* Adjust the padding as desired */
+    border-radius: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-family: Arial, sans-serif;
+    box-shadow: 0 9px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #messenger-chat:hover {
+    transform: scale(1.1);
   }
 
   #messenger-chat img {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
+    margin-left: 3px;
   }
 
   #messenger-chat a {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 </style>
 
@@ -328,37 +349,77 @@ document.oncontextmenu = new Function("return false")
 
 
 
+
 	
 	
-		<style>
-  #messenger-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #0084FF;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
+	  <style>
+        .facebook-messenger-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0084FF;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease;
+        }
+        .facebook-messenger-button:hover {
+            transform: scale(1.1);
+        }
+        .facebook-messenger-icon {
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+        }
+        .facebook-messenger-text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+    </style>
+	
+	
+		
+		
+		
+		
+		
+	
+	
+	
+
+	
+		
+		
+<style>
+  .swiper-container {
+    width: 100%;
   }
 
-  #messenger-chat img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+  .swiper-slide video {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Set the desired height for desktop */
+    object-fit: cover;
   }
 
-  #messenger-chat a {
-    color: #fff;
-    text-decoration: none;
+  /* Tablet and mobile adjustments */
+  @media (max-width: 991px) {
+    .swiper-slide video {
+      max-height: 400px; /* Set the desired height for tablets */
+    }
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 767px) {
+    .swiper-slide video {
+      max-height: 400px; /* Set the desired height for mobile devices */
+    }
   }
 </style>
-
-
 
 	
 	
