@@ -32,10 +32,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.cookie-message p {
-  margin: 0;
-  padding: 0;
+.cookie-message {
+  /* ... (other styles) ... */
+  overflow-y: auto;
+  max-height: 80vh;
 }
+
 
 .cookie-message button {
   margin-top: 10px;
