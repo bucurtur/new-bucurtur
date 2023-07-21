@@ -1450,32 +1450,27 @@ Pe lângă prețuri avantajoase, călătorii cu BucurTur în Europa se bucură d
 
 
 
-  <!-- Cookie Policy Message -->
-  <div id="cookieMessage" class="cookie-message">
-    <p>This website uses cookies to ensure you get the best experience on our website.</p>
-    <button id="closeButton">Got it!</button>
+ <!-- Cookie Policy Message -->
+  <div id="cookieOverlay" class="cookie-overlay">
+    <div class="cookie-message">
+      <p>This website uses cookies to ensure you get the best experience on our website.</p>
+      <button id="closeButton">Got it!</button>
+    </div>
   </div>
 
   <!-- Your other scripts and JavaScript files go here -->
 
-
-
-
-		
-
-
-
   <script>
     // Function to show the cookie policy message
     function showCookieMessage() {
-      const cookieMessage = document.getElementById('cookieMessage');
-      cookieMessage.style.display = 'block';
+      const cookieOverlay = document.getElementById('cookieOverlay');
+      cookieOverlay.style.display = 'flex';
     }
 
     // Function to hide the cookie policy message
     function hideCookieMessage() {
-      const cookieMessage = document.getElementById('cookieMessage');
-      cookieMessage.style.display = 'none';
+      const cookieOverlay = document.getElementById('cookieOverlay');
+      cookieOverlay.style.display = 'none';
     }
 
     // Event listener for the "Got it!" button
@@ -1497,7 +1492,6 @@ Pe lângă prețuri avantajoase, călătorii cu BucurTur în Europa se bucură d
       localStorage.setItem('cookiePolicyAccepted', 'true');
     }
   </script>
-
 
 
 
