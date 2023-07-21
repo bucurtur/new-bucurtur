@@ -1362,7 +1362,19 @@ Pe lângă prețuri avantajoase, călătorii cu BucurTur în Europa se bucură d
 										<li class="ci-contact-widget-item">
 											<i class="fas fa-envelope-square"></i> contact@bucur-tur.com
 										</li>
-									
+
+
+
+
+                                                                        <div class="footer-content">
+      <!-- Other footer links and content -->
+      <a href="#" id="cookiePolicyLink">Cookie Policy</a>
+    </div>
+
+
+
+
+										
 								</aside>
 							</div>
 					  </div>
@@ -1433,7 +1445,67 @@ Pe lângă prețuri avantajoase, călătorii cu BucurTur în Europa se bucură d
 
 
 
-		<script src="myjs/cookie.js"></script>
+
+
+
+
+
+  <!-- Cookie Policy Message -->
+  <div id="cookieMessage" class="cookie-message">
+    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <button id="closeButton">Got it!</button>
+  </div>
+
+  <!-- Your other scripts and JavaScript files go here -->
+
+
+
+
+		
+
+
+
+  <script>
+    // Function to show the cookie policy message
+    function showCookieMessage() {
+      const cookieMessage = document.getElementById('cookieMessage');
+      cookieMessage.style.display = 'block';
+    }
+
+    // Function to hide the cookie policy message
+    function hideCookieMessage() {
+      const cookieMessage = document.getElementById('cookieMessage');
+      cookieMessage.style.display = 'none';
+    }
+
+    // Event listener for the "Got it!" button
+    document.getElementById('closeButton').addEventListener('click', function() {
+      hideCookieMessage();
+    });
+
+    // Event listener for the "Cookie Policy" link
+    document.getElementById('cookiePolicyLink').addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent the link from navigating to another page
+      showCookieMessage();
+    });
+
+    // Check if the user has accepted the cookie policy
+    const acceptedCookiePolicy = localStorage.getItem('cookiePolicyAccepted');
+    if (!acceptedCookiePolicy) {
+      showCookieMessage();
+      // Save that the user has accepted the cookie policy
+      localStorage.setItem('cookiePolicyAccepted', 'true');
+    }
+  </script>
+
+
+
+
+
+
+
+
+		
 
 
 
