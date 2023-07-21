@@ -451,6 +451,70 @@ document.oncontextmenu = new Function("return false")
 	
 	<body>
 
+
+
+<!-- Your existing page content goes here -->
+
+<!-- Cookie policy message -->
+<div class="cookie-message" id="cookieMessage">
+  This website uses cookies to ensure you get the best experience on our website. By continuing to use our site, you agree to our cookie policy.
+  <button id="closeButton">Got it!</button>
+</div>
+
+<!-- Add this script at the end of the body tag -->
+<script>
+  // Function to show the cookie policy message
+  function showCookieMessage() {
+    const cookieMessage = document.getElementById('cookieMessage');
+    cookieMessage.style.display = 'block';
+  }
+
+  // Function to hide the cookie policy message
+  function hideCookieMessage() {
+    const cookieMessage = document.getElementById('cookieMessage');
+    cookieMessage.style.display = 'none';
+  }
+
+  // Event listener for the "Got it!" button
+  document.getElementById('closeButton').addEventListener('click', function() {
+    hideCookieMessage();
+  });
+
+  // Check if the user has accepted the cookie policy
+  const acceptedCookiePolicy = localStorage.getItem('cookiePolicyAccepted');
+  if (!acceptedCookiePolicy) {
+    showCookieMessage();
+    // Save that the user has accepted the cookie policy
+    localStorage.setItem('cookiePolicyAccepted', 'true');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
 		<div id="page">
 
 			<!-- Add .header-fullwidth for fullwidth header (1600px max width) -->
