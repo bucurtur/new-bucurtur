@@ -1447,6 +1447,43 @@ Pe lângă prețuri avantajoase, călătorii cu BucurTur în Europa se bucură d
 
 
 
+  <!-- Your other scripts and JavaScript files go here -->
+
+
+
+
+  <script>
+    // Function to show the cookie policy message
+    function showCookieMessage() {
+      const cookieOverlay = document.getElementById('cookieOverlay');
+      cookieOverlay.style.display = 'flex';
+    }
+
+    // Function to hide the cookie policy message
+    function hideCookieMessage() {
+      const cookieOverlay = document.getElementById('cookieOverlay');
+      cookieOverlay.style.display = 'none';
+    }
+
+    // Event listener for the "Got it!" button
+    document.getElementById('closeButton').addEventListener('click', function() {
+      hideCookieMessage();
+    });
+
+    // Event listener for the "Cookie Policy" link
+    document.getElementById('cookiePolicyLink').addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent the link from navigating to another page
+      showCookieMessage();
+    });
+
+    // Check if the user has accepted the cookie policy
+    const acceptedCookiePolicy = localStorage.getItem('cookiePolicyAccepted');
+    if (!acceptedCookiePolicy) {
+      showCookieMessage();
+      // Save that the user has accepted the cookie policy
+      localStorage.setItem('cookiePolicyAccepted', 'true');
+    }
+  </script>
 
 
 
@@ -1501,46 +1538,9 @@ Putem actualiza această Politică privind cookie-urile din când în când pent
 <br><br>
 Contact
 Dacă aveți întrebări despre această Politică privind cookie-urile sau despre practicile noastre privind datele, vă rugăm să ne contactați la contact@bucur-tur.com.</p>
-      <button id="closeButton">Am luat cunostinta cu politica Cookie</button>
+      <button id="closeButton">Am facut cunostinta cu politica Cookie</button>
     </div>
   </div>
-
-  <!-- Your other scripts and JavaScript files go here -->
-
-  <script>
-    // Function to show the cookie policy message
-    function showCookieMessage() {
-      const cookieOverlay = document.getElementById('cookieOverlay');
-      cookieOverlay.style.display = 'flex';
-    }
-
-    // Function to hide the cookie policy message
-    function hideCookieMessage() {
-      const cookieOverlay = document.getElementById('cookieOverlay');
-      cookieOverlay.style.display = 'none';
-    }
-
-    // Event listener for the "Got it!" button
-    document.getElementById('closeButton').addEventListener('click', function() {
-      hideCookieMessage();
-    });
-
-    // Event listener for the "Cookie Policy" link
-    document.getElementById('cookiePolicyLink').addEventListener('click', function(e) {
-      e.preventDefault(); // Prevent the link from navigating to another page
-      showCookieMessage();
-    });
-
-    // Check if the user has accepted the cookie policy
-    const acceptedCookiePolicy = localStorage.getItem('cookiePolicyAccepted');
-    if (!acceptedCookiePolicy) {
-      showCookieMessage();
-      // Save that the user has accepted the cookie policy
-      localStorage.setItem('cookiePolicyAccepted', 'true');
-    }
-  </script>
-
-
 
 
 
