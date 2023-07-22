@@ -1432,15 +1432,20 @@ Pe lângă prețuri avantajoase, călătorii cu BucurTur în Europa se bucură d
 
 
 
-  <!-- Cookie Policy Message -->
-  <div id="cookieOverlay" class="cookie-overlay">
-    <div class="cookie-message"><br><br><br>
-      <p>Politica privind cookie-urile pentru Compania de Transport Pasageri "Bucur Tur" din Moldova către Italia
-<br>
-Data intrării în vigoare: 21/07/2023
-<br><br>
 
-Bun venit la Compania de Transport Pasageri "Bucur Tur" din Moldova către Italia.
+
+
+
+
+
+<!-- Cookie Policy Message -->
+  <div class="cookie-overlay" id="cookieOverlay">
+    <div class="cookie-message">
+      <p>Politica privind cookie-urile pentru Compania de Transport Pasageri "Bucur Tur" din Moldova către Italia</p>
+      <p>... Data intrării în vigoare: 21/07/2023</p>
+      <p id="cookieContentShort">...</p>
+      <p id="cookieContentFull" style="display: none;">
+       Bun venit la Compania de Transport Pasageri "Bucur Tur" din Moldova către Italia.
 Această Politică privind cookie-urile explică modul în care utilizăm cookie-uri și tehnologii similare pe site-ul nostru.
 	      Prin accesarea și utilizarea site-ului nostru, sunteți de acord cu utilizarea cookie-urilor conform descrierii din această politică.
 <br><br>
@@ -1480,15 +1485,24 @@ Putem actualiza această Politică privind cookie-urile din când în când pent
 <br><br>
 Contact
 Dacă aveți întrebări despre această Politică privind cookie-urile sau despre practicile noastre privind datele, vă rugăm să ne contactați la contact@bucur-tur.com.</p>
-      <button id="closeButton">Am luat cunostinta cu politica cookie!</button>
+        <button id="closeButton">Got it!</button>
+      </p>
+      <button id="readMoreButton">Read More</button>
     </div>
   </div>
 
-  <!-- Your other scripts and JavaScript files go here -->
-
-
-
+  <!-- Your JavaScript code goes here -->
   <script>
+    // Function to show the full cookie policy message
+    function showFullCookieMessage() {
+      const cookieContentShort = document.getElementById('cookieContentShort');
+      const cookieContentFull = document.getElementById('cookieContentFull');
+      const readMoreButton = document.getElementById('readMoreButton');
+      cookieContentShort.style.display = 'none';
+      cookieContentFull.style.display = 'block';
+      readMoreButton.style.display = 'none';
+    }
+
     // Function to show the cookie policy message
     function showCookieMessage() {
       const cookieOverlay = document.getElementById('cookieOverlay');
@@ -1501,15 +1515,14 @@ Dacă aveți întrebări despre această Politică privind cookie-urile sau desp
       cookieOverlay.style.display = 'none';
     }
 
+    // Event listener for the "Read More" button
+    document.getElementById('readMoreButton').addEventListener('click', function() {
+      showFullCookieMessage();
+    });
+
     // Event listener for the "Got it!" button
     document.getElementById('closeButton').addEventListener('click', function() {
       hideCookieMessage();
-    });
-
-    // Event listener for the "Cookie Policy" link
-    document.getElementById('cookiePolicyLink').addEventListener('click', function(e) {
-      e.preventDefault(); // Prevent the link from navigating to another page
-      showCookieMessage();
     });
 
     // Check if the user has accepted the cookie policy
@@ -1522,6 +1535,19 @@ Dacă aveți întrebări despre această Politică privind cookie-urile sau desp
   </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+											
 
 
 
