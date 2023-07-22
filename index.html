@@ -1488,9 +1488,7 @@ Dacă aveți întrebări despre această Politică privind cookie-urile sau desp
 
 
 
-   <script>
-    // ... (your JavaScript code) ...
-
+  <script>
     // Function to show the cookie policy message
     function showCookieMessage() {
       const cookieOverlay = document.getElementById('cookieOverlay');
@@ -1508,6 +1506,12 @@ Dacă aveți întrebări despre această Politică privind cookie-urile sau desp
       hideCookieMessage();
     });
 
+    // Event listener for the "Cookie Policy" link
+    document.getElementById('cookiePolicyLink').addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent the link from navigating to another page
+      showCookieMessage();
+    });
+
     // Check if the user has accepted the cookie policy
     const acceptedCookiePolicy = localStorage.getItem('cookiePolicyAccepted');
     if (!acceptedCookiePolicy) {
@@ -1516,6 +1520,7 @@ Dacă aveți întrebări despre această Politică privind cookie-urile sau desp
       localStorage.setItem('cookiePolicyAccepted', 'true');
     }
   </script>
+
 
 
 
