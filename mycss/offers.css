@@ -6,6 +6,7 @@
 
 .elementor-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
@@ -49,4 +50,11 @@
 .widget-content {
   text-align: center;
   font-size: 18px;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 767px) {
+  .elementor-column {
+    flex-basis: 100%;
+  }
 }
