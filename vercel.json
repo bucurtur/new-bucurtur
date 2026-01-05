@@ -8,7 +8,7 @@
     },
     {
       "source": "https://bucur-tur.com/(.*)",
-      "destination": "https://smartymoves.co.uk/$1",
+      "destination": "https://bucurtur.md/$1",
       "permanent": true
     },
     {
