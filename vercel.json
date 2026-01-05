@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://bucurtur.md/:path*",
+      "destination": "https://www.bucurtur.md/:path*",
       "permanent": true
     }
   ]
