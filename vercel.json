@@ -1,0 +1,20 @@
+
+{
+  "redirects": [
+    {
+      "source": "https://www.bucur-tur.com/(.*)",
+      "destination": "https://smartymoves.co.uk/$1",
+      "permanent": true
+    },
+    {
+      "source": "https://bucur-tur.com/(.*)",
+      "destination": "https://smartymoves.co.uk/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://bucurtur.md/$1",
+      "permanent": true
+    }
+  ]
+}
